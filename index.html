@@ -1,178 +1,587 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>张伟宁的个人简历</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: "Microsoft YaHei", sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="张伟宁｜AI 数据项目运营与 Agent 数据评测运营简历">
+  <title>张伟宁｜AI 数据项目运营简历</title>
+  <style>
+    :root {
+      --paper: #FFFFFF;
+      --ink: #11263F;
+      --cobalt: #2359C4;
+      --muted: #546780;
+    }
 
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 30px;
-            border-bottom: 2px solid #008B8B;
-            padding-bottom: 20px;
-            gap: 20px;
-        }
+    * { box-sizing: border-box; }
 
-        .profile-img {
-            width: 180px;
-            height: 250px;
-            object-fit: cover;
-            margin-right: 20px;
-        }
+    html {
+      background: var(--paper);
+      line-break: strict;
+    }
 
-        .left-side {
-            flex-grow: 1;
-        }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      font-size: 9pt;
+      font-weight: 500;
+      line-height: 1.4;
+      line-break: strict;
+      word-break: normal;
+      overflow-wrap: break-word;
+      text-autospace: ideograph-alpha ideograph-numeric;
+      text-wrap: pretty;
+      font-synthesis: none;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+    }
 
-        .name {
-            font-size: 32px;
-            margin-bottom: 10px;
-        }
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto;
+      padding: 12mm 14mm 10mm;
+      background: var(--paper);
+    }
 
-        .job-title {
-            color: #008B8B;
-            margin-bottom: 15px;
-        }
+    .document-label {
+      display: flex;
+      align-items: center;
+      gap: 3mm;
+      margin: 0 0 6mm;
+      color: var(--muted);
+      font-family: "SFMono-Regular", "SF Mono", Menlo, Consolas, monospace;
+      font-size: 8.8pt;
+      font-weight: 600;
+      letter-spacing: 0;
+      line-height: 1.3;
+    }
 
-        .contact-info {
-            list-style: none;
-        }
+    .document-label::before {
+      width: 19mm;
+      height: 1.5px;
+      content: "";
+      background: var(--cobalt);
+    }
 
-        .section {
-            margin-bottom: 25px;
-        }
+    .identity {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 58mm;
+      gap: 8mm;
+      align-items: end;
+      padding-bottom: 4.5mm;
+      border-bottom: 1px solid var(--ink);
+    }
 
-        .section-title {
-            font-size: 20px;
-            border-bottom: 2px solid #008B8B;
-            padding-bottom: 5px;
-            margin-bottom: 15px;
-        }
+    h1, h2, h3, p { margin: 0; }
 
-        .experience-item {
-            margin-bottom: 20px;
-        }
+    h1, h2, h3 { text-wrap: balance; }
 
-        .date-location {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 10px;
-        }
+    h1 {
+      font-size: 31pt;
+      font-weight: 800;
+      letter-spacing: 0;
+      line-height: 1.04;
+    }
 
-        ul {
-            padding-left: 20px;
-        }
+    .role {
+      margin-top: 2mm;
+      color: var(--cobalt);
+      font-size: 12.6pt;
+      font-weight: 700;
+      letter-spacing: 0;
+      line-height: 1.25;
+    }
 
-        li {
-            margin-bottom: 8px;
-        }
-    </style>
+    .target-role {
+      max-width: 58mm;
+      padding-bottom: 0;
+      color: var(--ink);
+      font-size: 9.4pt;
+      font-weight: 500;
+      letter-spacing: 0;
+      line-height: 1.42;
+      text-align: right;
+    }
+
+    .target-role strong {
+      display: block;
+      margin-bottom: 2mm;
+      color: var(--muted);
+      font-size: 9.2pt;
+      font-weight: 700;
+      line-height: 1.25;
+    }
+
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0 2.5mm;
+      padding: 3mm 0;
+      border-bottom: 1.5px solid var(--cobalt);
+      color: var(--muted);
+      font-size: 8.8pt;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    .contact span + span::before {
+      margin-right: 2.5mm;
+      color: var(--cobalt);
+      content: "／";
+    }
+
+    .resume-flow {
+      margin-top: 5.5mm;
+      padding-left: 2.5mm;
+      border-left: 1.5px solid var(--cobalt);
+    }
+
+    .resume-section {
+      display: grid;
+      grid-template-columns: 16mm minmax(0, 1fr);
+      column-gap: 4mm;
+      padding: 0 0 3.3mm;
+    }
+
+    .resume-section:last-child { padding-bottom: 4mm; }
+
+    .section-index {
+      grid-column: 1;
+      grid-row: 1;
+      color: var(--cobalt);
+      font-family: "SFMono-Regular", "SF Mono", Menlo, Consolas, monospace;
+      font-size: 9pt;
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+      letter-spacing: 0;
+      line-height: 1.18;
+      text-align: left;
+    }
+
+    .section-index b,
+    .section-index i {
+      display: block;
+    }
+
+    .section-index i {
+      margin-top: .8mm;
+      font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      font-size: 9pt;
+      font-style: normal;
+      font-weight: 600;
+      letter-spacing: 0;
+      line-height: 1.22;
+    }
+
+    .resume-section > :not(.section-index) {
+      grid-column: 2;
+      min-width: 0;
+    }
+
+    .section-head {
+      display: inline-flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      column-gap: 5mm;
+      row-gap: 1mm;
+      margin-bottom: 3mm;
+      padding: 0;
+      border: 0;
+    }
+
+    .section-head h2 {
+      flex: 0 0 auto;
+      font-size: 12.1pt;
+      font-weight: 800;
+      letter-spacing: 0;
+      line-height: 1.18;
+    }
+
+    .section-head p {
+      min-width: 0;
+      color: var(--muted);
+      font-size: 9pt;
+      font-weight: 600;
+      letter-spacing: 0;
+      line-height: 1.22;
+    }
+
+    .summary {
+      max-width: none;
+      font-size: 9pt;
+      line-height: 1.4;
+    }
+
+    .experience + .experience {
+      margin-top: 4.5mm;
+      padding-top: 4mm;
+      border-top: 1px solid var(--ink);
+    }
+
+    .role-line,
+    .project-line {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 28mm;
+      column-gap: 4mm;
+      align-items: baseline;
+    }
+
+    .role-line { margin-bottom: 2.5mm; }
+
+    .project-line { margin-bottom: 1mm; }
+
+    .role-line h3,
+    .project-line h3 {
+      font-size: 10.3pt;
+      font-weight: 700;
+      letter-spacing: 0;
+      line-height: 1.4;
+    }
+
+    .role-line h3 span {
+      color: var(--cobalt);
+      font-weight: 700;
+    }
+
+    .role-line time,
+    .project-line time {
+      color: var(--muted);
+      font-family: "SFMono-Regular", "SF Mono", Menlo, Consolas, monospace;
+      font-size: 8.8pt;
+      font-weight: 600;
+      font-variant-numeric: tabular-nums;
+      letter-spacing: 0;
+      line-height: 1.3;
+      white-space: nowrap;
+      text-align: right;
+    }
+
+    .evidence-list {
+      display: grid;
+      gap: 1.6mm;
+      margin: 0;
+      padding: 0 0 0 5mm;
+      list-style: none;
+    }
+
+    .evidence-list li {
+      position: relative;
+      padding-left: 5mm;
+    }
+
+    .evidence-list li::before {
+      position: absolute;
+      top: .74em;
+      left: 0;
+      width: 3mm;
+      height: 1.5px;
+      content: "";
+      background: var(--cobalt);
+    }
+
+    .number {
+      color: var(--cobalt);
+      font-family: "SFMono-Regular", "SF Mono", Menlo, Consolas, monospace;
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+      letter-spacing: 0;
+      white-space: nowrap;
+    }
+
+    .project-line .project-kind {
+      display: inline-block;
+      margin-left: 4mm;
+      color: var(--cobalt);
+      font-size: 9pt;
+      font-weight: 600;
+      letter-spacing: 0;
+    }
+
+    .project-copy {
+      font-size: 9pt;
+      line-height: 1.4;
+    }
+
+    .project-entry + .project-entry { margin-top: 2.3mm; }
+
+    .skills {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 8mm;
+      row-gap: 2mm;
+    }
+
+    .skill-row {
+      padding: 0;
+      border: 0;
+    }
+
+    .skill-row strong {
+      display: block;
+      margin-bottom: 0;
+      color: var(--cobalt);
+      font-size: 9.3pt;
+      font-weight: 700;
+      letter-spacing: 0;
+      line-height: 1.22;
+    }
+
+    .skill-row span {
+      display: block;
+      font-size: 9.3pt;
+      line-height: 1.4;
+    }
+
+    .credentials {
+      display: grid;
+      gap: 2mm;
+    }
+
+    .credential {
+      display: grid;
+      grid-template-columns: 24mm minmax(0, 1fr);
+      gap: 4mm;
+      align-items: baseline;
+      padding: 0;
+      border: 0;
+    }
+
+    .credential-label {
+      color: var(--cobalt);
+      font-size: 9.3pt;
+      font-weight: 700;
+      letter-spacing: 0;
+      line-height: 1.22;
+    }
+
+    .credential-copy {
+      color: var(--ink);
+      font-size: 9pt;
+      line-height: 1.4;
+    }
+
+    @media screen and (max-width: 800px) {
+      body {
+        font-size: 16px;
+        line-height: 1.62;
+      }
+
+      .page {
+        width: 100%;
+        min-height: 0;
+        padding: 24px 18px 28px;
+      }
+
+      .identity {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      h1 { font-size: 36px; }
+
+      .document-label {
+        font-size: 12px;
+        line-height: 1.3;
+      }
+
+      .role { font-size: 18px; }
+
+      .target-role {
+        max-width: none;
+        padding: 0;
+        font-size: 16px;
+        text-align: left;
+      }
+
+      .target-role strong { font-size: 14px; }
+
+      .contact {
+        font-size: 13px;
+        line-height: 1.5;
+      }
+
+      .resume-flow {
+        margin-top: 22px;
+        padding-left: 12px;
+      }
+
+      .resume-section {
+        grid-template-columns: 40px minmax(0, 1fr);
+        column-gap: 12px;
+        padding-bottom: 26px;
+      }
+
+      .resume-section:last-child { padding-bottom: 12px; }
+
+      .section-index { font-size: 14px; }
+
+      .section-index i { font-size: 12px; }
+
+      .section-head {
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      .section-head h2 { font-size: 18px; }
+
+      .section-head p {
+        margin-top: 4px;
+        font-size: 14px;
+      }
+
+      .role-line,
+      .project-line {
+        grid-template-columns: 1fr;
+        row-gap: 4px;
+      }
+
+      .role-line h3,
+      .project-line h3 { font-size: 16px; }
+
+      .role-line time,
+      .project-line time {
+        font-size: 13px;
+        text-align: left;
+      }
+
+      .summary,
+      .evidence-list li,
+      .project-copy,
+      .skill-row span,
+      .credential-copy {
+        font-size: 15px;
+        line-height: 1.68;
+      }
+
+      .skill-row strong,
+      .credential-label { font-size: 14px; }
+
+      .skills { grid-template-columns: 1fr; }
+
+      .credential {
+        grid-template-columns: 72px minmax(0, 1fr);
+        gap: 8px;
+      }
+    }
+
+    @media print {
+      @page { size: A4 portrait; margin: 0; }
+
+      html, body {
+        width: 210mm;
+        height: 297mm;
+        background: var(--paper);
+      }
+
+      .page {
+        width: 210mm;
+        min-height: 297mm;
+        margin: 0;
+        break-after: page;
+        page-break-after: always;
+      }
+
+      .experience,
+      .skill-row,
+      .credential { break-inside: avoid; }
+    }
+  </style>
 </head>
 <body>
-    <div class="header">
-        <img src="your-photo.jpg" alt="个人照片" class="profile-img">
-        <div class="left-side">
-            <h1 class="name">张伟宁</h1>
-            <p class="job-title">求职意向：AI 方向</p>
+  <main class="page" aria-label="张伟宁简历">
+    <header data-prism-block="profile">
+      <p class="document-label">求职资料 · 2026.09</p>
+      <div class="identity">
+        <div>
+          <h1>张伟宁</h1>
+          <p class="role">AI 数据项目运营 / Agent 数据评测运营</p>
         </div>
-        <div class="personal-info">
-            <ul class="contact-info">
-                <li>24岁 (2000.09)</li>
-                <li>15839803313</li>
-                <li>Z3085952463@gmail.com</li>
-                <li>北京市</li>
-                <li>GitHub: www.github.com/TTTire</li>
-            </ul>
+        <p class="target-role"><strong>求职方向</strong>AI 数据项目运营 ·<br>Agent 数据评测运营</p>
+      </div>
+      <p class="contact">
+        <span>北京市</span><span>15839803313</span><span>1449071713@qq.com</span><span>GitHub：TTTire</span>
+      </p>
+    </header>
+
+    <div class="resume-flow">
+      <section class="resume-section" data-prism-block="summary">
+        <span class="section-index" aria-hidden="true"><b>01</b><i>范围</i></span>
+        <div class="section-head"><h2>角色定位</h2><p>范围界定</p></div>
+        <p class="summary">负责 AI 数据项目从需求拆解、试标与规则迭代，到生产协同、质量验证、测试与交付的闭环运营；覆盖 AutoGLM、OSAgent 等项目，并支持 Agent、具身智能、Skill 调优与 Agent 开发相关的数据任务、评测和交付协同。</p>
+      </section>
+
+      <section class="resume-section" data-prism-block="employment">
+        <span class="section-index" aria-hidden="true"><b>02</b><i>生产</i></span>
+        <div class="section-head"><h2>工作经历</h2><p>规则与生产</p></div>
+
+        <article class="experience">
+          <div class="role-line">
+            <h3>智谱华章 <span>｜AI 数据运营</span></h3>
+            <time datetime="2025-04">2025.04–至今</time>
+          </div>
+          <ul class="evidence-list">
+            <li>统筹 AutoGLM、OSAgent、数学、生物等 <span class="number">12</span> 项核心数据项目，推进标注规范与 SOP、版本管理、生产协同及交付。</li>
+            <li>建立“试标—规则优化—全量生产”流程；累计交付 <span class="number">102,428</span> 条高质量数据，数学等项目 <span class="number">100%</span> 按期交付。</li>
+            <li>主导 OSAgent 文本类任务从 0 到 1，产出 <span class="number">10,000+</span> 条高质量数据；参与 Agent、具身智能、Skill 调优及 Agent 开发相关数据任务，支持规则迭代、试标、质量验证与交付协同。</li>
+            <li>输出 <span class="number">140+</span> 测试用例并参与相关平台测试；使用 Python、模型 API、JSON 工具完成预处理与自动化，标注及清洗效率提升约 <span class="number">35%</span>；Hackathon 第 4 名。</li>
+          </ul>
+        </article>
+
+        <article class="experience">
+          <div class="role-line">
+            <h3>作业帮 <span>｜数据标注实习生</span></h3>
+            <time datetime="2024-05">2024.05–2024.10</time>
+          </div>
+          <ul class="evidence-list">
+            <li>负责 K12 题目类型、难度与答案的标注分类。</li>
+            <li>参与单轮、多轮对话数据任务和质量控制。</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="resume-section" data-prism-block="project">
+        <span class="section-index" aria-hidden="true"><b>03</b><i>自动化</i></span>
+        <div class="section-head"><h2>独立项目</h2><p>自动化证据</p></div>
+        <article class="project-entry">
+          <div class="project-line">
+            <h3>Gerness <span class="project-kind">个人项目</span></h3>
+            <time datetime="2026-06">2026.06–至今</time>
+          </div>
+          <p class="project-copy">以 Rust 开发中文优先的代码任务 Agent CLI，支持 OpenAI/Anthropic 兼容协议适配、工具调用及权限治理；实现多 Agent 子任务派发与模型路由、JSONL 会话审计、默认经确认写入的项目记忆与影子 Git 检查点。src/ 下 30 个 Rust 核心源文件，配套 365 个自动化测试用例（266 个单元、96 个 CLI 集成、3 个逻辑集成）。</p>
+        </article>
+        <article class="project-entry">
+          <div class="project-line">
+            <h3>n8n 早间新闻简报 <span class="project-kind">独立搭建</span></h3>
+            <time datetime="2025-03">2025.03</time>
+          </div>
+          <p class="project-copy">基于 n8n、Firecrawl、DeepSeek-R1、SMTP，构建新闻抓取、AI 摘要、原文链接整合和邮件定时推送流程，减少人工浏览、跳转、整理环节。</p>
+        </article>
+      </section>
+
+      <section class="resume-section" data-prism-block="capabilities">
+        <span class="section-index" aria-hidden="true"><b>04</b><i>方法</i></span>
+        <div class="section-head"><h2>能力结构</h2><p>方法复用</p></div>
+        <div class="skills">
+          <div class="skill-row"><strong>项目与交付</strong><span>试标、标注规则、SOP、版本管理、质控、项目协同、交付推进</span></div>
+          <div class="skill-row"><strong>测试与数据处理</strong><span>测试用例设计、Python、模型 API、JSON、Git/GitHub</span></div>
+          <div class="skill-row"><strong>工具与工作流</strong><span>Cursor、Coze、Dify、n8n、Firecrawl、Vercel</span></div>
+          <div class="skill-row"><strong>AI 应用认知</strong><span>RAG、MCP、A2A、NLP（了解）；FineBI 初级数据分析师</span></div>
         </div>
+      </section>
+
+      <section class="resume-section" data-prism-block="education-and-other">
+        <span class="section-index" aria-hidden="true"><b>05</b><i>协作</i></span>
+        <div class="section-head"><h2>教育与其他</h2><p>协作基础</p></div>
+        <div class="credentials">
+          <div class="credential"><span class="credential-label">教育</span><p class="credential-copy">北京联合大学｜计算机科学与技术｜2025.07 毕业</p></div>
+          <div class="credential"><span class="credential-label">其他经历</span><p class="credential-copy">武警部队文书｜2021.09–2023.09｜半年副班长管理经验；获“四有优秀军人”及个人嘉奖。</p></div>
+        </div>
+      </section>
     </div>
 
-    <div class="section">
-        <h2 class="section-title">教育背景</h2>
-        <div class="experience-item">
-            <div class="date-location">
-                <span>2023.09-2025.06</span>
-                <span>北京联合大学</span>
-                <span>计算机科学与技术</span>
-            </div>
-            <p>主修课程：计算机组成原理，面向对象程序设计，数据结构，web开发技术，计算机网络，前端开发技术，数据库原理及应用，操作系统。</p>
-        </div>
-    </div>
-
-    <div class="section">
-        <h2 class="section-title">项目经验</h2>
-        <div class="experience-item">
-            <div class="date-location">
-                <span>2024.05-2024.07</span>
-                <span>微信航空公司小程序开发</span>
-                <span>设计工程师</span>
-            </div>
-            <ul>
-                <li>负责小程序业务系统的设计及改进；</li>
-                <li>参与航空公司小程序网上商城系统产品功能设计及实施工作；</li>
-                <li>参与后期项目调试及工作。</li>
-            </ul>
-        </div>
-        <div class="experience-item">
-            <div class="date-location">
-                <span>2024.10-2024.11</span>
-                <span>AI 大模型竞品分析</span>
-                <span>项目负责人</span>
-            </div>
-            <ul>
-                <li>负责整个竞品分析项目的统筹规划；</li>
-                <li>参与协作进行市场调研；</li>
-                <li>负责项目总结与优化。</li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="section">
-        <h2 class="section-title">社会经历</h2>
-        <div class="experience-item">
-            <div class="date-location">
-                <span>2021.09-2023.09</span>
-                <span>中国人民武装警察部队</span>
-            </div>
-            <ul>
-                <li>参加多次重大演习，主要担负执勤及安保工作。</li>
-                <li>深知团队的力量，在军队中参与过众多集体任务，学会了与不同性格、不同专长的战友合作，善于沟通协调，能够快速找准自己在团队中的定位，发挥自身优势助力团队达成目标。</li>
-                <li>拥有坚强的意志，不怕困难与挑战。在军事任务中，无论面对多大的压力和危险，都能保持冷静，坚守岗位，不轻易放弃，始终朝着任务目标努力奋进</li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="section">
-        <h2 class="section-title">技能证书&能力</h2>
-        <ul>
-            <li>普通话二级乙等；大学英语良好的听说读写能力，快速浏览英语文件及书籍；</li>
-            <li>熟练运用 office 相关软件。</li>
-            <li>自学深入 JAVA，python 等计算机语言。</li>
-            <li>拥有 FineBI 初级数据分析师证书。</li>
-            <li>使用过市面上大部分 AI 产品</li>
-            <li>熟悉并了解 AI 训练师工作流程</li>
-        </ul>
-    </div>
-
-    <div class="section">
-        <h2 class="section-title">自我评价</h2>
-        <p>深度互联网爱好人员及 AI 发烧友，对互联网特有度的敏感性和关注度，了解产品开发流程，有很强的产品规划、需求分析、交互设计能力，善于沟通，贴近用户，工作积极主动，责任心强，具备良好的团队协作能力，擅长在团队中找准定位并发挥优势，适配性极佳，学习能力出众，新的知识能迅速吸收掌握。</p>
-    </div>
+  </main>
 </body>
-</html> 
+</html>
